@@ -1,0 +1,31 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.tensorust/ontology",
+  "title": "Tensorust Ontology",
+  "description": "US ownership graph, BDC loan marks, banned-vendor grant exposure, contractor credit, ROAD Act checks",
+  "websiteUrl": "https://shop.tensorust.com/mcp",
+  "version": "0.4.0",
+  "icons": [
+    {
+      "src": "https://tensorust.com/img/v2/mascot-512.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://shop.tensorust.com/api/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Optional. 'Bearer tdk_...' Tensorust key for full data (keys at https://shop.tensorust.com/ontology). The free tier works without it.",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
