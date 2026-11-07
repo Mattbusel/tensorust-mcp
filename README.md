@@ -7,7 +7,7 @@ Remote MCP server (Streamable HTTP) from Tensorust LLC. Nothing to install: poin
 **Official MCP Registry:** `com.tensorust/ontology` ([server.json](server.json))
 **Glama:** https://glama.ai/mcp/connectors/com.tensorust.shop/tensorust-ontology
 
-It answers who owns and controls US organizations and property, what private lenders mark their loans at, which federal research awards cite products from banned vendors, and which buyers fall under the ROAD Act investor ban. Everything comes from public records: SEC (10-Q, BDC data sets, Exhibit 21), USAspending/FPDS, NIH RePORTER, Europe PMC, DOL Form 5500, FCC (ULS, ECFS, Form 323), FAA registry, USAC E-Rate and county property rolls in 17 counties.
+It lists and samples a catalog of 145 entity-level datasets, and it answers who owns and controls US organizations and property, what private lenders mark their loans at, which federal research awards cite products from banned vendors, and which buyers fall under the ROAD Act investor ban. Everything comes from public records: SEC (10-Q, BDC data sets, Exhibit 21), USAspending/FPDS, NIH RePORTER, Europe PMC, DOL Form 5500, FCC (ULS, ECFS, Form 323), FAA registry, USAC E-Rate and county property rolls in 17 counties.
 
 ## Install
 
@@ -31,7 +31,17 @@ Quick check from a shell:
 curl -s -X POST https://shop.tensorust.com/api/mcp -H 'content-type: application/json' -H 'accept: application/json, text/event-stream' -d '{"jsonrpc":"2.0","id":1,"method":"tools/list"}'
 ```
 
-## Tools (32)
+## Tools (38)
+
+### Dataset catalog (145 entity-level datasets)
+
+| tool | what it does |
+|---|---|
+| `list_datasets` | Browse 145 datasets built from public records (SEC, USAspending, FCC, CMS, EPA, DOL, USAC, county rolls and more): going-concern warnings, BDC non-accruals, E-Rate deadlines, Upper C-band fleets and others. Filter by words or category; returns one line each, row count, tiers, the dataset page and the free sample link. Free. |
+| `get_dataset` | One dataset's card: who it is for, what each row holds, the headline finding, coverage, sources, tiers and how to buy it by invoice. Free. |
+| `get_dataset_sample` | The free 25-row sample as CSV, the same file the dataset's tensorust.com page publishes. Full files are sold by invoice and never returned by a tool. Free. |
+
+Plain HTTP, no MCP client needed: `GET https://shop.tensorust.com/api/datasets?q=<words>`, `GET https://shop.tensorust.com/api/datasets/<slug>`, `GET https://shop.tensorust.com/api/datasets/<slug>?sample=1` (CSV). Browse by hand at https://tensorust.com/datasets/.
 
 ### Ownership and control graph
 

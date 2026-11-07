@@ -2,9 +2,9 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "com.tensorust/ontology",
   "title": "Tensorust Ontology",
-  "description": "US ownership graph, BDC loan marks, banned-vendor grant exposure, contractor credit, ROAD Act checks",
+  "description": "US ownership graph, BDC loan marks, banned-vendor exposure, ROAD Act checks, 145-dataset catalog",
   "websiteUrl": "https://shop.tensorust.com/mcp",
-  "version": "0.4.0",
+  "version": "0.6.0",
   "icons": [
     {
       "src": "https://tensorust.com/img/v2/mascot-512.png",
