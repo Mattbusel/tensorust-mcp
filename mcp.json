@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "tensorust": {
+      "url": "https://shop.tensorust.com/api/mcp"
+    }
+  }
+}
